@@ -1,0 +1,15 @@
+<form (ngSubmit)="register()">
+    <label for ="username">账号：</label>
+    <input name="username" id="username" [(ngModel)]="username"/>
+    <p>
+    <label for ="password">密码：</label>
+    <input type="password" name="password" id="password" [(ngModel)]="password"/>
+    </p>
+    <p>
+    <label for ="password">再次确认：</label>
+    <input type="password" name="password2" id="password2" [(ngModel)]="password2"/>
+    </p>
+    <input type="submit" value="注册"/>
+</form>
+
+    

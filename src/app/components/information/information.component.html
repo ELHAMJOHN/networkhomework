@@ -1,0 +1,21 @@
+<h2>我和我的祖国</h2>
+<hr>
+<div>
+    <table>
+        <tr>
+            <th>序号</th>
+            <th>导演</th>
+            <th>编剧</th>
+            <th>制片</th>
+            <th>主演</th>
+            <th>剧情</th>
+        </tr>
+        <tr *ngFor="let stu of Students; index as i">
+            <td>{{i+1}}</td>
+            <td>{{stu.name0}}</td>
+            <td>{{stu.name1}}</td>
+            <td>{{stu.name2}}</td>
+            <td>{{stu.name3}}</td>
+            <td>{{stu.name4}}</td>
+        </tr>
+    </table>

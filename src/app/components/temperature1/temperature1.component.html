@@ -1,0 +1,20 @@
+<h2>摄氏温度转华氏温度转换器</h2>
+<hr>
+<div>
+    请在 0 处输入想要转化的温度
+    <input type="text" [(ngModel)]="tempC" >
+    <button (click)="keyCtoF()">转换</button>
+</div>
+<div>
+    摄氏温度 {{tempC}} 转换为华氏温度的值为：{{resultF.toPrecision(3)}}
+</div>
+<h2>华氏温度转摄氏温度转换器</h2>
+<hr>
+<div>
+    请在 0 处输入想要转化的温度
+    <input type="text" [(ngModel)]="tempF">
+    <button (click)="keyFtoC()">转换</button>
+</div>
+<div>
+    华氏温度 {{tempF}} 转换为摄氏温度的值为：{{resultC.toPrecision(3)}}
+</div>

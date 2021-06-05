@@ -1,0 +1,30 @@
+<h2>成绩等级计算器</h2>
+<hr>
+<div>
+    请输入你的成绩: 
+    <input type="text" [(ngModel)]="score" > 
+    <button (click)="calc()">计算</button>
+</div>
+<div *ngIf="score>=0 && score<=100"> 
+    <div [ngSwitch]="scoreInt"> 
+        <div *ngSwitchCase="10">你的成绩为:优秀!</div>
+        <div *ngSwitchCase="9">你的成绩为:优秀!</div>
+        <div *ngSwitchCase="8">你的成绩为:良好!</div>
+        <div *ngSwitchCase="7">你的成绩为:中等!</div>
+        <div *ngSwitchCase="6">你的成绩为:及格!</div>
+        <div *ngSwitchDefault>你的成绩为:不及格!</div>  <!--ngSwitchDefault为缺省选项-->
+    </div>
+</div>
+<h2>成绩等级计算器</h2>
+<hr>
+<div>
+    请输入你的成绩：
+    <input type="text" [(ngModel)]="score" > 
+    <button (click)="calc()">计算</button>
+</div>
+<div>
+    <div *ngIf="scoreInt>6"> 你的成绩是：合格!!
+</div>
+</div>
+    <div *ngIf="scoreInt<6"> 你的成绩是：不合格!!!
+</div>

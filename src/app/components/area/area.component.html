@@ -1,0 +1,10 @@
+<h2>三角形面积计算器</h2>
+<div class='inputLayout'>
+    <input type="text" [(ngModel)]="sideA" placeholder="请输入第一条边长"><br>
+    <input type="text" [(ngModel)]="sideB" placeholder="请输入第二条边长"><br>
+    <input type="text" [(ngModel)]="sideC" placeholder="请输入第三条边长"><br>
+</div>
+<button (click)="calc()">计算</button>
+<div>
+    三角形的面积为:{{area}}
+</div>

@@ -1,0 +1,13 @@
+h1,h2{
+    text-align: center;
+} 
+.flagLayout {  
+    display       : flex;
+    flex-direction: column;
+    align-items   : center; 
+}
+.flagLayout div {  
+    width           : 100;
+    height          : 100px;
+    background-color: aqua;
+}

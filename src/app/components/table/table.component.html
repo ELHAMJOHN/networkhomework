@@ -1,0 +1,41 @@
+<h1>九九乘法表1</h1>
+<div class="layout">
+    <div *ngFor="let row of arr">
+        <div *ngFor="let col of aro" class="inline">
+            <div *ngIf="row<=col">
+                {{row}} × {{col}} = {{col*row}}
+            </div>
+        </div>
+    </div>
+</div>
+<h1>九九乘法表2</h1>
+<div class="layout">
+    <div *ngFor="let row of arr">
+        <div *ngFor="let col of aro" class="inline">
+            <div *ngIf="col<=row">
+                {{col}} × {{row}} = {{row*col}}
+            </div>
+        </div>
+    </div>
+</div>
+<h1>九九乘法表3</h1>
+<div class="layout">
+    <div *ngFor="let row of arr, let i=index">
+        <div *ngFor="let col of arr, let j=index" class="inline">
+            <div *ngIf="i<=j">
+                {{i+1}} × {{j+1}} = {{(i+1)*(j+1)}}
+            </div>
+        </div>
+    </div>
+</div>
+<h1>九九乘法表4</h1>
+<div class="layout">
+    <div *ngFor="let row of arr">
+        <div *ngFor="let col of arr" class="inline">
+            <div *ngIf="col<=row">
+                {{col}} × {{row}} = {{row*col}}
+            </div>
+        </div>
+    </div>
+</div>
+
