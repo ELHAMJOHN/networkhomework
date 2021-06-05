@@ -22,7 +22,7 @@ export class Register2Component implements OnInit {
   ];
   originss: any[] = [
     { value: '汉族', display: '汉族' },
-    { value: '维族', display: '维族' }
+    { value: '维吾尔族', display: 'weiwuerz' }
   ];
   constructor(private storageService: StorageService) {}
 
