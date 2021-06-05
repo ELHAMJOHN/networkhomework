@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StorageService } from 'src/app/services/storage.service';
+//import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-register2',
@@ -8,26 +8,25 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class Register2Component implements OnInit {
   public username: any = '';
-  public usercollege:any='';
+  public usercollege: any = '';
 
   origins: any[] = [
-    { value: "18", display: "18" },
-    { value: "19", display: "19" },
-    { value: "20", display: "20" },
-    { value: "21", display: "21" },
-    { value: "22", display: "22" },
-    { value: "23", display: "23" },
-    { value: "24", display: "24" },
-    { value: "25", display: "25" },
+    { value: '18', display: '18' },
+    { value: '19', display: '19' },
+    { value: '20', display: '20' },
+    { value: '21', display: '21' },
+    { value: '22', display: '22' },
+    { value: '23', display: '23' },
+    { value: '24', display: '24' },
+    { value: '25', display: '25' }
   ];
-  originss:any[]=[
-    { value: "汉族", display: "汉族" },
-    { value: "维族", display: "维族" },
+  originss: any[] = [
+    { value: '汉族', display: '汉族' },
+    { value: '维族', display: '维族' }
   ];
-  constructor(private storageService: StorageService) { }
+  constructor(private storageService: StorageService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   onSubmit(form: any): void {
     console.log('you submitted value:', form);
     this.storageService.append(this.username);
@@ -36,5 +35,22 @@ export class Register2Component implements OnInit {
   hobby: boolean = true;
   change(event: any) {
     console.log(event);
+  }
+}
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class StorageService {
+  public list: string[] = [];
+  public list2: string[] = [];
+
+  constructor() {}
+  append(str: string) {
+    this.list.push(str);
+  }
+  add(str2: string) {
+    this.list.push(str2);
   }
 }

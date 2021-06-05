@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StorageService} from 'src/app/services/storage.service'
+//import { StorageService} from 'src/app/services/storage.service'
 
 
 @Component({
@@ -16,5 +16,22 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     
     this.list = this.sharedService.list;
+  }
+}
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class StorageService {
+  public list: string[] = [];
+  public list2:string[] = [];
+
+  constructor() { }
+  append(str: string) {
+    this.list.push(str);
+  }
+  add(str2:string){
+    this.list.push(str2);
   }
 }
