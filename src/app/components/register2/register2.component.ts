@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { StorageService } from 'src/app/services/storage.service';
-
+import { Injectable } from '@angular/core';
 @Component({
   selector: 'app-register2',
   templateUrl: './register2.component.html',
@@ -37,7 +36,7 @@ export class Register2Component implements OnInit {
     console.log(event);
   }
 }
-import { Injectable } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root'
